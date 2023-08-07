@@ -7,8 +7,9 @@ import Ordenador from './Ordenador'
 
 
 const Cardapio = () => {
-  const [busca, setBusca] = useState('');
-  const [filtro, setFiltro] = useState<number | null>(null);
+  const [busca, setBusca] = useState(''); //estado para saber o que está sendo buscado, se nada, o valor é vazio "('')"
+
+  const [filtro, setFiltro] = useState<number | null>(null); //estado para saber qual filtro está selecionado, se nenhum, o valor é nulo
 
   const [ordenador, setOrdenador] = useState(''); //estado para saber qual ordenador está selecionada, se nenhuma, o valor é vazio "('')"
 
