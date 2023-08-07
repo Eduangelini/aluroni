@@ -10,6 +10,9 @@ const Cardapio = () => {
   const [busca, setBusca] = useState('');
   const [filtro, setFiltro] = useState<number | null>(null);
 
+  const [ordenador, setOrdenador] = useState(''); //estado para saber qual ordenador está selecionada, se nenhuma, o valor é vazio "('')"
+
+
   return (
     <main>
       <nav className={styles.menu}>
@@ -31,7 +34,10 @@ const Cardapio = () => {
             filtro={filtro}
             setFiltro={setFiltro}
           />
-          <Ordenador />
+          <Ordenador
+            ordenador={ordenador}
+            setOrdenador={setOrdenador}
+          />
         </div>
       </section>
     </main>
