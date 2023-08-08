@@ -4,15 +4,27 @@
     "value": ""
   },
   {
+    "nome": "A-Z",
+    "value": "a_z"
+  },
+  {
+    "nome": "Z-A",
+    "value": "z_a"
+  },
+  {
+    "nome": "Menor Preço",
+    "value": "menor_preco"
+  },
+  {
+    "nome": "Maior Preço",
+    "value": "maior_preco"
+  },
+  {
     "nome": "Porção",
     "value": "porcao"
   },
   {
     "nome": "Qtd. pessoas",
     "value": "qtd_pessoas"
-  },
-  {
-    "nome": "Preço",
-    "value": "preco"
   }
 ]
