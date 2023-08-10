@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import styles from './Ordenador.module.scss'
-import opcoes from './opcoes.json'
-import classNames from 'classnames'
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
+import { useState } from 'react';
+import styles from './Ordenador.module.scss';
+import opcoes from './opcoes.json';
+import classNames from 'classnames';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 interface OrdenadorProps {
   ordenador: string;
@@ -11,9 +11,9 @@ interface OrdenadorProps {
 
 export default function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
 
-  const [aberto, setAberto] = useState(false) //estado para saber se o dropdown está aberto ou não
+  const [aberto, setAberto] = useState(false); //estado para saber se o dropdown está aberto ou não
 
-  const nomeOrdenador = ordenador && opcoes.find(opcao => opcao.value === ordenador)?.nome //se o estado ordenador for vazio, ele mostra "Ordenar Por", se não, ele mostra o nome da opção selecionada
+  const nomeOrdenador = ordenador && opcoes.find(opcao => opcao.value === ordenador)?.nome; //se o estado ordenador for vazio, ele mostra "Ordenar Por", se não, ele mostra o nome da opção selecionada
 
   return (
     <button
@@ -24,7 +24,7 @@ export default function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
       onClick={() => setAberto(!aberto)} //ao clicar no dropdown, ele abre, se já estiver aberto, ele fecha
       onBlur={() => setAberto(false)} //ao clicar fora do dropdown, ele fecha
     >
-      <span>{nomeOrdenador || "Ordenar Por"}</span>
+      <span>{nomeOrdenador || 'Ordenar Por'}</span>
       {aberto ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
       {/*se o dropdown estiver aberto, ele mostra a seta para cima, se não, mostra a seta para baixo*/}
 
@@ -45,5 +45,5 @@ export default function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
         ))}
       </div>
     </button>
-  )
+  );
 }

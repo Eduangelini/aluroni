@@ -31,20 +31,20 @@ export default function Itens(props: ItensProps) {
   // Função para ORDENAR a lista de itens do cardapio
   function ordenar(novaLista: typeof cardapio) {
     switch (ordenador) {
-      case 'porcao':
-        return novaLista.sort((a, b) => a.size > b.size ? 1 : -1);
-      case 'qtd_pessoa':
-        return novaLista.sort((a, b) => a.serving > b.serving ? 1 : -1);
-      case 'menor_preco':
-        return novaLista.sort((a, b) => a.price > b.price ? 1 : -1);
-      case 'maior_preco':
-        return novaLista.sort((a, b) => a.price > b.price ? -1 : 1);
-      case 'a_z':
-        return novaLista.sort((a, b) => a.title[0] > b.title[0] ? 1 : -1);
-      case 'z_a':
-        return novaLista.sort((a, b) => a.title[0] > b.title[0] ? -1 : 1);
-      default:
-        return novaLista;
+    case 'porcao':
+      return novaLista.sort((a, b) => a.size > b.size ? 1 : -1);
+    case 'qtd_pessoa':
+      return novaLista.sort((a, b) => a.serving > b.serving ? 1 : -1);
+    case 'menor_preco':
+      return novaLista.sort((a, b) => a.price > b.price ? 1 : -1);
+    case 'maior_preco':
+      return novaLista.sort((a, b) => a.price > b.price ? -1 : 1);
+    case 'a_z':
+      return novaLista.sort((a, b) => a.title[0] > b.title[0] ? 1 : -1);
+    case 'z_a':
+      return novaLista.sort((a, b) => a.title[0] > b.title[0] ? -1 : 1);
+    default:
+      return novaLista;
     }
   }
 
@@ -55,7 +55,7 @@ export default function Itens(props: ItensProps) {
       testaBusca(item.title, item.description) && testaFiltro(item.category.id)
     );
     setLista(ordenar(novaLista));
-  }, [busca, filtro, ordenador])
+  }, [busca, filtro, ordenador]);
 
   return (
     <div className={styles.itens}>
@@ -66,5 +66,5 @@ export default function Itens(props: ItensProps) {
         />
       ))}
     </div>
-  )
+  );
 }

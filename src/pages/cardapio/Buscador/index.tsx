@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './Buscador.module.scss'
-import { CgSearch } from 'react-icons/cg'
+import React from 'react';
+import styles from './Buscador.module.scss';
+import { CgSearch } from 'react-icons/cg';
 
 interface BuscadorProps {
   busca: string
@@ -20,7 +20,7 @@ const Buscador = ({ busca, setBusca }: BuscadorProps) => {
         color='#4c4d5e'
       />
     </div>
-  )
-}
+  );
+};
 
-export default Buscador
+export default Buscador;

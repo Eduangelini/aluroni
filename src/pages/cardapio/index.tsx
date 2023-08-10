@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import Buscador from './Buscador'
-import styles from './Cardapio.module.scss'
-import { ReactComponent as Logo } from 'assets/logo.svg'
-import Filtros from './Filtros'
-import Ordenador from './Ordenador'
-import Itens from './Itens'
+import { useState } from 'react';
+import Buscador from './Buscador';
+import styles from './Cardapio.module.scss';
+import { ReactComponent as Logo } from 'assets/logo.svg';
+import Filtros from './Filtros';
+import Ordenador from './Ordenador';
+import Itens from './Itens';
 
 
 
@@ -49,7 +49,7 @@ const Cardapio = () => {
         />
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default Cardapio
+export default Cardapio;
