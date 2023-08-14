@@ -25,12 +25,11 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "indent": [
-      "error",
-      2
+      "off"
     ],
     "linebreak-style": [
       "error",
-      "unix"
+      "Unix"
     ],
     "quotes": [
       "error",
